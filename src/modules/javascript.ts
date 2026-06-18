@@ -37,7 +37,7 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
 
   return [
     {
-      name: 'hellolin/javascript/base',
+      name: 'silvecor/javascript/base',
       languageOptions: {
         ecmaVersion: 'latest',
         globals: {
@@ -139,7 +139,7 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
       },
     },
     {
-      name: 'hellolin/javascript/extra',
+      name: 'silvecor/javascript/extra',
       plugins: {
         unicorn: pluginUnicorn,
         e18e: pluginE18e,
@@ -165,7 +165,7 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
         'e18e/prefer-string-fromcharcode': 'error',
         'e18e/prefer-timer-args': 'warn',
         'e18e/prefer-url-canparse': 'error',
-        'hellolin/top-level-arrow-function': 'warn',
+        'silvecor/top-level-arrow-function': 'warn',
         'unicorn/consistent-assert': 'error',
         'unicorn/consistent-function-scoping': 'error',
         'unicorn/custom-error-definition': 'error',
@@ -232,7 +232,7 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
       },
     },
     {
-      name: 'hellolin/javascript/style',
+      name: 'silvecor/javascript/style',
       plugins: {
         perfectionist: pluginPerfectionist,
         style: pluginStylistic,
@@ -334,7 +334,7 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
       },
     },
     {
-      name: 'hellolin/javascript/regexp',
+      name: 'silvecor/javascript/regexp',
       plugins: {
         regexp: pluginRegExp,
       },
