@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "description": "ESLint config for @silvecor projects.",
   "scripts": {
-    "prepare": "husky"
+    "build": "tsdown",
+    "dev": "eslint-config-inspector --config eslint-inspector.config.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "bumpp"
   },
   "keywords": [
     "eslint",
@@ -28,8 +32,8 @@
     "bumpp": "^11.1.0",
     "commitlint": "^21.0.2",
     "eslint": "^10.5.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.0.7",
+    "lefthook": "^2.1.9",
+    "nano-staged": "^1.0.2",
     "tsdown": "^0.22.3",
     "typescript": "^6.0.3"
   },
