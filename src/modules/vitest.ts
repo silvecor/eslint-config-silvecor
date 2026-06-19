@@ -1,10 +1,12 @@
 import type { FlatConfig } from '../types';
 import pluginVitest from '@vitest/eslint-plugin';
+import { GlobTests } from '../globs';
 
 export function vitest(): FlatConfig[] {
   return [
     {
       name: 'silvecor/vitest',
+      files: [GlobTests],
       plugins: {
         vitest: pluginVitest,
       },

@@ -2,6 +2,8 @@ import type { FlatConfig } from './types';
 import { FlatConfigComposer } from 'eslint-flat-config-utils';
 import {
   commands,
+  format,
+  type FormatOptions,
   ignores,
   javascript,
   type JavaScriptOptions,
@@ -21,6 +23,7 @@ import { combineTypeScriptOptions, normalizeOptions } from './utils';
 export interface FactoryOptions {
   env?: JavaScriptOptions['env'];
   typescript?: boolean | TypeScriptOptions;
+  format?: boolean | FormatOptions;
   node?: boolean;
   react?: boolean | ReactOptions;
   vitest?: boolean;
@@ -31,14 +34,20 @@ export function silvecor(options: FactoryOptions = {}): FlatConfigComposer {
 
   configs.push(
     ignores(),
-    javascript({ env: options.env }),
     commands(),
+    javascript({ env: options.env }),
   );
   if (options.typescript) {
     configs.push(
       typescript(
         combineTypeScriptOptions(normalizeOptions(options.typescript)),
       ),
+    );
+  }
+
+  if (options.format) {
+    configs.push(
+      format(normalizeOptions(options.format)),
     );
   }
 
