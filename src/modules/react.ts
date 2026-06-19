@@ -1,12 +1,12 @@
 import type { FlatConfig } from '../types';
 import pluginReact from '@eslint-react/eslint-plugin';
-import { GlobTS, GlobTSX } from '../globs';
+import pluginNext from '@next/eslint-plugin-next';
+import { defu } from 'defu';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y-x';
 import pluginReactRefresh, { type OnlyExportComponentsOptions } from 'eslint-plugin-react-refresh';
-import pluginNext from '@next/eslint-plugin-next';
 import globals from 'globals';
-import { defu } from 'defu';
 import { allowExportNames } from '../data/fast-refresh';
+import { GlobTS, GlobTSX } from '../globs';
 
 export interface ReactOptions {
   /**
@@ -56,11 +56,11 @@ export function react(options: ReactOptions = {}): FlatConfig[] {
   } = options;
 
   const reactFastRefreshOptions = defu(
-    typeof reactFastRefresh !== 'object' ? {} : reactFastRefresh, 
+    typeof reactFastRefresh === 'object' ? reactFastRefresh : {},
     {
       allowConstantExport: framework === 'vite' || framework === 'reactRouter',
       allowExportNames: framework in allowExportNames ? allowExportNames[framework] : [],
-    }
+    },
   );
 
   const files = checkNonJSXFiles ? [GlobTS, GlobTSX] : [GlobTSX];
@@ -83,6 +83,10 @@ export function react(options: ReactOptions = {}): FlatConfig[] {
       },
       /// keep-sorted
       rules: {
+        'react-refresh/only-export-components': [
+          reactFastRefresh ? 'warn' : 'off',
+          reactFastRefreshOptions,
+        ],
         'react/dom-no-dangerously-set-innerhtml-with-children': 'error',
         'react/dom-no-dangerously-set-innerhtml': 'warn',
         'react/dom-no-find-dom-node': 'error',
@@ -106,32 +110,10 @@ export function react(options: ReactOptions = {}): FlatConfig[] {
         ],
         'react/globals': 'error',
         'react/immutability': 'error',
-        'react/purity': 'error',
-        'react/refs': 'error',
-        'react/rules-of-hooks': 'error',
-        'react/set-state-in-effect': 'error',
-        'react/set-state-in-render': 'error',
-        'react/static-components': 'error',
-        'react/naming-convention-context-name': 'warn',
-        'react/use-state': [
-          'warn',
-          {
-            enforceAssignment: true,
-            enforceSetterName: true,
-          },
-        ],
-        'react-refresh/only-export-components': [
-          reactFastRefresh ? 'warn' : 'off',
-          reactFastRefreshOptions,
-        ],
-        'react/web-api-no-leaked-event-listener': 'error',
-        'react/web-api-no-leaked-interval': 'error',
-        'react/web-api-no-leaked-resize-observer': 'error',
-        'react/web-api-no-leaked-timeout': 'error',
-        'react/jsx-no-key-after-spread': 'error',
         'react/jsx-no-comment-textnodes': 'error',
-        'react/jsx-no-iife': 'warn',
+        'react/jsx-no-key-after-spread': 'error',
         'react/jsx-no-namespace': 'error',
+        'react/naming-convention-context-name': 'warn',
         'react/no-access-state-in-setstate': 'error',
         'react/no-array-index-key': 'error',
         'react/no-children-count': 'error',
@@ -161,7 +143,24 @@ export function react(options: ReactOptions = {}): FlatConfig[] {
         'react/no-unused-class-component-members': 'warn',
         'react/no-unused-state': 'warn',
         'react/no-use-context': 'warn',
+        'react/purity': 'error',
+        'react/refs': 'error',
         'react/rsc-function-definition': rsc ? 'error' : 'off',
+        'react/rules-of-hooks': 'error',
+        'react/set-state-in-effect': 'error',
+        'react/set-state-in-render': 'error',
+        'react/static-components': 'error',
+        'react/use-state': [
+          'warn',
+          {
+            enforceAssignment: true,
+            enforceSetterName: true,
+          },
+        ],
+        'react/web-api-no-leaked-event-listener': 'error',
+        'react/web-api-no-leaked-interval': 'error',
+        'react/web-api-no-leaked-resize-observer': 'error',
+        'react/web-api-no-leaked-timeout': 'error',
       },
     },
     {

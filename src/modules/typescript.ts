@@ -1,8 +1,8 @@
-import type { FlatConfig } from '../types';
 import type { ParserOptions } from '@typescript-eslint/parser';
-import { GlobJS, GlobMarkdown, GlobTS } from '../globs';
+import type { FlatConfig } from '../types';
 import pluginTypeScript from '@typescript-eslint/eslint-plugin';
 import parserTypeScript from '@typescript-eslint/parser';
+import { GlobJS, GlobMarkdown, GlobTS } from '../globs';
 
 export interface TypeScriptOptions {
   inEditor?: boolean;
@@ -201,9 +201,6 @@ export function typescript(options: TypeScriptOptions = {}): FlatConfig[] {
         'style/type-annotation-spacing': ['error', {
           before: false,
           after: true,
-          overrides: {
-            arrow: { before: true, after: true },
-          },
         }],
       },
     },

@@ -1,7 +1,7 @@
 import type { FlatConfig, Rules } from '../types';
-import { GlobJson, GlobJson5, GlobJsonc } from '../globs';
 import pluginJson from 'eslint-plugin-jsonc';
 import * as parserJson from 'jsonc-eslint-parser';
+import { GlobJson, GlobJson5, GlobJsonc } from '../globs';
 
 const jsonSharedOptions: FlatConfig = {
   plugins: {

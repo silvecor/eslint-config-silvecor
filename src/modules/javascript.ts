@@ -1,12 +1,14 @@
 import type { FlatConfig } from '../types';
 import pluginE18e from '@e18e/eslint-plugin';
 import pluginStylistic from '@stylistic/eslint-plugin';
+import { defu } from 'defu';
 import pluginDeMorgan from 'eslint-plugin-de-morgan';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 import pluginRegExp from 'eslint-plugin-regexp';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
-import { defu } from 'defu';
+
+type GlobalsType = Record<string, boolean | 'off' | 'readonly' | 'readable' | 'writable' | 'writeable'>;
 
 export interface JavaScriptOptions {
   env?: {
@@ -18,7 +20,7 @@ export interface JavaScriptOptions {
     serviceWorker?: boolean;
     greaseMonkey?: boolean;
     webExtensions?: boolean;
-    customGlobals?: Record<string, boolean | 'off' | 'readonly' | 'readable' | 'writable' | 'writeable'>;
+    customGlobals?: GlobalsType;
   };
 }
 
@@ -29,11 +31,11 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
     node: true,
   });
 
-  const enabledGlobals =
-    Object.entries(env)
+  const enabledGlobals
+    = Object.entries(env)
       .filter(([_, value]) => value === true)
       .map(([key]) => globals[key as keyof typeof globals])
-      .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+      .reduce<GlobalsType>((acc, cur) => Object.assign(acc, cur), {});
 
   return [
     {
@@ -165,22 +167,21 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
         'e18e/prefer-string-fromcharcode': 'error',
         'e18e/prefer-timer-args': 'warn',
         'e18e/prefer-url-canparse': 'error',
-        'silvecor/top-level-arrow-function': 'warn',
         'unicorn/consistent-assert': 'error',
         'unicorn/consistent-function-scoping': 'error',
         'unicorn/custom-error-definition': 'error',
+        'unicorn/dom-node-dataset': 'error',
         'unicorn/error-message': 'warn',
         'unicorn/escape-case': ['error', 'uppercase'],
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-accessor-recursion': 'error',
-        'unicorn/no-array-for-each': 'error',
         'unicorn/no-array-method-this-argument': 'error',
         'unicorn/no-await-expression-member': 'error',
         'unicorn/no-await-in-promise-methods': 'error',
         'unicorn/no-console-spaces': 'warn',
         'unicorn/no-document-cookie': 'error',
+        'unicorn/no-for-each': 'error',
         'unicorn/no-for-loop': 'warn',
-        'unicorn/no-hex-escape': 'error',
         'unicorn/no-instanceof-builtins': ['error', { strategy: 'loose' }],
         'unicorn/no-invalid-fetch-options': 'error',
         'unicorn/no-invalid-remove-event-listener': 'error',
@@ -203,7 +204,6 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
         'unicorn/prefer-class-fields': 'warn',
         'unicorn/prefer-date-now': 'error',
         'unicorn/prefer-dom-node-append': 'error',
-        'unicorn/prefer-dom-node-dataset': 'error',
         'unicorn/prefer-dom-node-remove': 'error',
         'unicorn/prefer-dom-node-text-content': 'error',
         'unicorn/prefer-event-target': 'error',
@@ -228,6 +228,7 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
         'unicorn/prefer-string-slice': 'error',
         'unicorn/prefer-string-starts-ends-with': 'error',
         'unicorn/prefer-string-trim-start-end': 'warn',
+        'unicorn/prefer-unicode-code-point-escapes': 'error',
         'unicorn/throw-new-error': 'error',
       },
     },
@@ -245,17 +246,19 @@ export function javascript(options: JavaScriptOptions = {}): FlatConfig[] {
         'perfectionist/sort-exports': ['warn', { type: 'natural' }],
         'perfectionist/sort-imports': ['warn', {
           groups: [
-            'type',
-            ['parent-type', 'sibling-type', 'index-type', 'internal-type'],
-            'builtin',
-            'external',
-            'internal',
-            ['parent', 'sibling', 'index'],
+            'type-import',
+            ['type-parent', 'type-sibling', 'type-index', 'type-internal'],
+            'value-builtin',
+            'value-external',
+            'value-internal',
+            ['value-parent', 'value-sibling', 'value-index'],
             'side-effect',
-            'object',
+            'ts-equals-import',
             'unknown',
           ],
           newlinesBetween: 'ignore',
+          newlinesInside: 'ignore',
+          order: 'asc',
           type: 'natural',
         }],
         'perfectionist/sort-named-exports': ['warn', { type: 'natural' }],

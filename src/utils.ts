@@ -1,4 +1,4 @@
-import type { TypeScriptOptions } from "./modules/typescript";
+import type { TypeScriptOptions } from './modules/typescript';
 
 export const normalizeOptions = <T>(options: boolean | undefined | T): T =>
   (typeof options === 'boolean' || typeof options === 'undefined')
@@ -21,4 +21,4 @@ export const isInEditor = (): boolean =>
 
 
 export const combineTypeScriptOptions = (options: TypeScriptOptions): TypeScriptOptions =>
-  ({ ...options, inEditor: isInEditor(), });
+  ({ ...options, inEditor: isInEditor() });
