@@ -13,6 +13,7 @@ import {
   toml,
   typescript,
   type TypeScriptOptions,
+  vitest,
   yaml,
 } from './modules';
 import { combineTypeScriptOptions, normalizeOptions } from './utils';
@@ -22,6 +23,7 @@ export interface FactoryOptions {
   typescript?: boolean | TypeScriptOptions;
   node?: boolean;
   react?: boolean | ReactOptions;
+  vitest?: boolean;
 }
 
 export function silvecor(options: FactoryOptions = {}): FlatConfigComposer {
@@ -48,6 +50,9 @@ export function silvecor(options: FactoryOptions = {}): FlatConfigComposer {
 
   if (options.node) {
     configs.push(node());
+  }
+  if (options.vitest) {
+    configs.push(vitest());
   }
   configs.push(
     json(),

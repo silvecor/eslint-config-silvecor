@@ -7,4 +7,5 @@ export * from './react';
 export * from './sort';
 export * from './toml';
 export * from './typescript';
+export * from './vitest';
 export * from './yaml';
