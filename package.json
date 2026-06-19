@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-silvecor",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packageManager": "pnpm@11.8.0",
   "description": "ESLint config for @silvecor projects.",
   "author": "Silver Chloride <me@silvecor.dev>",
