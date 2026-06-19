@@ -7,6 +7,8 @@ export default defineConfig({
   clean: true,
   format: ['esm'],
   minify: false,
-  external: ['eslint'],
   fixedExtension: false,
+  deps: {
+    neverBundle: ['eslint'],
+  },
 });
