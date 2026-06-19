@@ -1,14 +1,20 @@
 {
   "name": "eslint-config-silvecor",
+  "type": "module",
   "version": "0.0.0",
+  "packageManager": "pnpm@11.7.0",
   "description": "ESLint config for @silvecor projects.",
-  "scripts": {
-    "build": "tsdown",
-    "dev": "eslint-config-inspector --config eslint-inspector.config.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "release": "bumpp"
+  "author": "Silver Chloride <me@silvecor.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/silvecor/eslint-config-silvecor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvecor/eslint-config-silvecor.git"
   },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -21,33 +27,15 @@
   "files": [
     "dist"
   ],
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ],
-  "author": "Silver Chloride <me@silvecor.dev>",
-  "license": "MIT",
-  "homepage": "https://github.com/silvecor/eslint-config-silvecor",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/silvecor/eslint-config-silvecor.git"
+  "scripts": {
+    "build": "tsdown",
+    "dev": "eslint-config-inspector --config eslint-inspector.config.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "bumpp"
   },
-  "packageManager": "pnpm@11.7.0",
-  "type": "module",
   "peerDependencies": {
     "eslint": ">=9"
-  },
-  "devDependencies": {
-    "@commitlint/config-conventional": "^21.0.2",
-    "@eslint/config-inspector": "^3.0.4",
-    "@types/node": "^25.9.3",
-    "bumpp": "^11.1.0",
-    "commitlint": "^21.0.2",
-    "eslint": "^10.5.0",
-    "lefthook": "^2.1.9",
-    "lint-staged": "^17.0.7",
-    "tsdown": "^0.22.3",
-    "typescript": "^6.0.3"
   },
   "dependencies": {
     "@e18e/eslint-plugin": "^0.5.1",
@@ -76,5 +64,17 @@
     "jsonc-eslint-parser": "^3.1.0",
     "toml-eslint-parser": "^1.0.3",
     "yaml-eslint-parser": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^21.0.2",
+    "@eslint/config-inspector": "^3.0.4",
+    "@types/node": "^25.9.3",
+    "bumpp": "^11.1.0",
+    "commitlint": "^21.0.2",
+    "eslint": "^10.5.0",
+    "lefthook": "^2.1.9",
+    "lint-staged": "^17.0.7",
+    "tsdown": "^0.22.3",
+    "typescript": "^6.0.3"
   }
 }

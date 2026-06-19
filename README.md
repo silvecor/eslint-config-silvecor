@@ -1,6 +1,6 @@
 # eslint-config-silvecor
 
-ESLint config for @silvecor projects. 
+ESLint config for @silvecor projects.
 
 Migrated from [@hellolin-eslint/config](https://github.com/silvecor/eslint-config).
 

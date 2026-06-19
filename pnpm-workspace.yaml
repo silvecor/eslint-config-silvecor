@@ -1,5 +1,5 @@
+minimumReleaseAge: 0
+trustPolicy: no-downgrade
 allowBuilds:
   lefthook: true
 
-minimumReleaseAge: 0
-trustPolicy: no-downgrade
