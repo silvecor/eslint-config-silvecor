@@ -2,9 +2,11 @@ import {
   commands,
   ignores,
   javascript,
+  type JavaScriptOptions,
   json,
   node,
-  type JavaScriptOptions,
+  react,
+  type ReactOptions,
   typescript,
   type TypeScriptOptions,
   yaml,
@@ -17,6 +19,7 @@ export interface FactoryOptions {
   env?: JavaScriptOptions['env'];
   typescript?: boolean | TypeScriptOptions;
   node?: boolean;
+  react?: boolean | ReactOptions;
 }
 
 export function silvecor(options: FactoryOptions = {}): FlatConfigComposer {
@@ -32,6 +35,12 @@ export function silvecor(options: FactoryOptions = {}): FlatConfigComposer {
       typescript(
         combineTypeScriptOptions(normalizeOptions(options.typescript)),
       ),
+    );
+  }
+  
+  if (options.react) {
+    configs.push(
+      react(normalizeOptions(options.react))
     );
   }
 

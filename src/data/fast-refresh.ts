@@ -1,0 +1,27 @@
+export const allowExportNames: Record<string, string[]> = {
+  next: [
+    'dynamic',
+    'dynamicParams',
+    'revalidate',
+    'fetchCache',
+    'runtime',
+    'preferredRegion',
+    'maxDuration',
+    'config',
+    'generateSitemaps',
+    'generateStaticParams',
+    'metadata',
+    'generateMetadata',
+    'generateImageMetadata',
+    'viewport',
+    'generateViewport',
+    'experimental_ppr',
+  ],
+  reactRouter: [
+    'meta',
+    'links',
+    'headers',
+    'loader',
+    'action',
+  ],
+};
