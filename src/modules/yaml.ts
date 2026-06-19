@@ -5,7 +5,7 @@ import * as parserYaml from 'yaml-eslint-parser';
 export function yaml(): FlatConfig[] {
   return [
     {
-      name: 'silvecor/yaml/yaml',
+      name: 'silvecor/yaml',
       files: ['**/*.y?(a)ml'],
       plugins: {
         yaml: pluginYaml,

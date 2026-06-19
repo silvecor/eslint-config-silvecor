@@ -9,6 +9,8 @@ import {
   node,
   react,
   type ReactOptions,
+  sort,
+  toml,
   typescript,
   type TypeScriptOptions,
   yaml,
@@ -50,6 +52,8 @@ export function silvecor(options: FactoryOptions = {}): FlatConfigComposer {
   configs.push(
     json(),
     yaml(),
+    toml(),
+    sort(),
   );
 
   return new FlatConfigComposer(...configs);
