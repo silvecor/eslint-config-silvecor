@@ -15,16 +15,16 @@ importers:
         specifier: ^5.18.3
         version: 5.18.3(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       '@next/eslint-plugin-next':
-        specifier: ^16.2.12
+        specifier: ^16.3.0
         version: 16.3.0(eslint@10.8.1(jiti@2.7.0))
       '@stylistic/eslint-plugin':
         specifier: ^5.10.0
         version: 5.10.0(eslint@10.8.1(jiti@2.7.0))
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.61.1
+        specifier: ^8.66.0
         version: 8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       '@typescript-eslint/parser':
-        specifier: ^8.61.1
+        specifier: ^8.66.0
         version: 8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       '@vitest/eslint-plugin':
         specifier: ^1.6.26
@@ -48,16 +48,16 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-jsonc:
-        specifier: ^3.2.0
+        specifier: ^3.4.1
         version: 3.4.1(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-jsx-a11y-x:
         specifier: ^0.2.0
         version: 0.2.0(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-n:
-        specifier: ^18.1.0
+        specifier: ^18.2.2
         version: 18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-perfectionist:
-        specifier: ^5.9.1
+        specifier: ^5.10.1
         version: 5.10.1(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-react-refresh:
         specifier: ^0.5.3
@@ -66,32 +66,32 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-toml:
-        specifier: ^1.4.0
+        specifier: ^1.5.0
         version: 1.5.0(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-unicorn:
         specifier: ^68.0.0
         version: 68.0.0(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-yml:
-        specifier: ^3.4.0
+        specifier: ^3.8.1
         version: 3.8.1(eslint@10.8.1(jiti@2.7.0))
       globals:
-        specifier: ^17.6.0
+        specifier: ^17.9.0
         version: 17.9.0
       jsonc-eslint-parser:
-        specifier: ^3.1.0
+        specifier: ^3.2.0
         version: 3.3.0
       toml-eslint-parser:
         specifier: ^1.0.3
         version: 1.0.3
       yaml-eslint-parser:
-        specifier: ^2.0.0
+        specifier: ^2.1.0
         version: 2.1.0
     devDependencies:
       '@commitlint/config-conventional':
-        specifier: ^21.0.2
+        specifier: ^21.2.0
         version: 21.2.0
       '@eslint/config-inspector':
-        specifier: ^3.0.4
+        specifier: ^3.2.0
         version: 3.2.0(eslint@10.8.1(jiti@2.7.0))(srvx@0.12.5)
       '@types/node':
         specifier: ^25.9.5
@@ -100,10 +100,10 @@ importers:
         specifier: ^11.1.0
         version: 11.1.0
       commitlint:
-        specifier: ^21.0.2
+        specifier: ^21.2.1
         version: 21.2.1(@types/node@25.9.5)(conventional-commits-parser@7.1.2)(typescript@6.0.3)
       eslint:
-        specifier: ^10.5.0
+        specifier: ^10.8.0
         version: 10.8.1(jiti@2.7.0)
       lefthook:
         specifier: ^2.1.10
