@@ -27,8 +27,8 @@ importers:
         specifier: ^8.66.0
         version: 8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       '@vitest/eslint-plugin':
-        specifier: ^1.6.26
-        version: 1.6.26(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
+        specifier: ^1.6.27
+        version: 1.6.27(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       defu:
         specifier: ^6.1.7
         version: 6.1.7
@@ -54,14 +54,14 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-n:
-        specifier: ^18.2.2
+        specifier: ^18.3.0
         version: 18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-perfectionist:
         specifier: ^5.10.1
         version: 5.10.1(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-react-refresh:
-        specifier: ^0.5.3
-        version: 0.5.3(eslint@10.8.1(jiti@2.7.0))
+        specifier: ^0.5.4
+        version: 0.5.4(eslint@10.8.1(jiti@2.7.0))
       eslint-plugin-regexp:
         specifier: ^3.1.1
         version: 3.1.1(eslint@10.8.1(jiti@2.7.0))
@@ -78,7 +78,7 @@ importers:
         specifier: ^17.9.0
         version: 17.9.0
       jsonc-eslint-parser:
-        specifier: ^3.2.0
+        specifier: ^3.3.0
         version: 3.3.0
       toml-eslint-parser:
         specifier: ^1.0.3
@@ -103,7 +103,7 @@ importers:
         specifier: ^21.2.1
         version: 21.2.1(@types/node@25.9.5)(conventional-commits-parser@7.1.2)(typescript@6.0.3)
       eslint:
-        specifier: ^10.8.0
+        specifier: ^10.8.1
         version: 10.8.1(jiti@2.7.0)
       lefthook:
         specifier: ^2.1.10
@@ -694,8 +694,8 @@ packages:
     resolution: {integrity: sha512-dkKR8q+lKciskj1Y3vthHktl+3cMLWGyVUP23bRiPZ5O9BRT++4EqDDV+TVeIKBL1VXVEqrJlz8MYbcnvJcAlg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vitest/eslint-plugin@1.6.26':
-    resolution: {integrity: sha512-2eawZk4MZvkEtMZFdScmCE0R1Rti85uRZpmbe9eAv5Q3blDZ5OxlrC9IHlSnxhDCqOO2xKNaD3oufl9BUlI0yA==}
+  '@vitest/eslint-plugin@1.6.27':
+    resolution: {integrity: sha512-X1RCAfwbatG4GFbJ/1PIHP9MSZMt0JJThqbYID+vS4L783k6QGlLPe421wQE8dHXuGCcenVLsydiM4qzsYWxhg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '*'
@@ -1218,8 +1218,8 @@ packages:
       eslint: '*'
       typescript: '*'
 
-  eslint-plugin-react-refresh@0.5.3:
-    resolution: {integrity: sha512-5EMmLCV98Pi4o/f/3DP/v/tNqLHMIc9I8LKClNDWhZ9JTho89/kQcitCXQBMG7sAfVRK0Ie3T2EDOzp1YXYiVA==}
+  eslint-plugin-react-refresh@0.5.4:
+    resolution: {integrity: sha512-7bqTKz7T0r+HKWFarNXByDE9/5+73wI2ru+M3zuqGbR7s/b/5/pQJXZoufWlrngqGqoZto73ZkGumCdLxk+4rw==}
     peerDependencies:
       eslint: ^9 || ^10
 
@@ -2564,7 +2564,7 @@ snapshots:
       '@typescript-eslint/types': 8.66.0
       eslint-visitor-keys: 5.0.1
 
-  '@vitest/eslint-plugin@1.6.26(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)':
+  '@vitest/eslint-plugin@1.6.27(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.66.0
       '@typescript-eslint/utils': 8.66.0(eslint@10.8.1(jiti@2.7.0))(typescript@6.0.3)
@@ -3014,7 +3014,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-refresh@0.5.3(eslint@10.8.1(jiti@2.7.0)):
+  eslint-plugin-react-refresh@0.5.4(eslint@10.8.1(jiti@2.7.0)):
     dependencies:
       eslint: 10.8.1(jiti@2.7.0)
 
