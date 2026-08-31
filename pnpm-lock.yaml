@@ -21,10 +21,10 @@ importers:
         specifier: ^5.10.0
         version: 5.10.0(eslint@10.9.1(jiti@2.7.0))
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.67.0
+        specifier: ^8.68.0
         version: 8.68.0(@typescript-eslint/parser@8.68.0(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3)
       '@typescript-eslint/parser':
-        specifier: ^8.67.0
+        specifier: ^8.68.0
         version: 8.68.0(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3)
       '@vitest/eslint-plugin':
         specifier: ^1.6.27
@@ -33,7 +33,7 @@ importers:
         specifier: ^6.1.7
         version: 6.1.7
       eslint-config-flat-gitignore:
-        specifier: ^2.3.0
+        specifier: ^2.4.0
         version: 2.4.0(eslint@10.9.1(jiti@2.7.0))
       eslint-flat-config-utils:
         specifier: ^3.2.0
@@ -106,10 +106,10 @@ importers:
         specifier: ^10.9.1
         version: 10.9.1(jiti@2.7.0)
       lefthook:
-        specifier: ^2.1.10
+        specifier: ^2.1.12
         version: 2.1.12
       lint-staged:
-        specifier: ^17.3.0
+        specifier: ^17.4.1
         version: 17.4.1
       tsdown:
         specifier: ^0.22.14
