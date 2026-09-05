@@ -2,7 +2,7 @@
   "name": "eslint-config-silvecor",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@11.8.0",
+  "packageManager": "pnpm@12.3.0",
   "description": "ESLint config for @silvecor projects.",
   "author": "Silver Chloride <me@silvecor.dev>",
   "license": "MIT",
