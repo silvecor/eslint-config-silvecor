@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "packageManager": "pnpm@12.3.2",
   "description": "ESLint config for @silvecor projects.",
-  "author": "Silver Chloride <me@silvecor.dev>",
+  "author": "silvecor <me@silvecor.dev>",
   "license": "MIT",
   "homepage": "https://github.com/silvecor/eslint-config-silvecor",
   "repository": {
