@@ -70,7 +70,7 @@
     "@eslint/config-inspector": "^3.5.0",
     "@types/node": "^25.9.8",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "bumpp": "^11.1.0",
+    "bumpp": "^12.3.0",
     "commitlint": "^21.2.3",
     "eslint": "^10.11.0",
     "lefthook": "^2.1.14",
