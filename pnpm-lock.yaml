@@ -116,7 +116,7 @@ importers:
         specifier: ^5.20.8
         version: 5.20.8(@typescript/typescript6@6.0.2)(eslint@10.11.0(jiti@2.7.0))
       '@next/eslint-plugin-next':
-        specifier: ^16.3.7
+        specifier: ^16.3.8
         version: 16.3.8(eslint@10.11.0(jiti@2.7.0))
       '@stylistic/eslint-plugin':
         specifier: ^5.10.0
