@@ -68,12 +68,12 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^21.2.3",
     "@eslint/config-inspector": "^3.5.0",
-    "@types/node": "^25.9.8",
+    "@types/node": "^25.9.9",
     "@typescript/native": "npm:typescript@^7.0.2",
     "bumpp": "^11.1.0",
     "commitlint": "^21.2.3",
     "eslint": "^10.11.0",
-    "lefthook": "^2.1.15",
+    "lefthook": "^2.1.16",
     "lint-staged": "^17.6.0",
     "tsdown": "^0.22.14",
     "typescript": "npm:@typescript/typescript6@^6.0.2"
