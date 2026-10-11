@@ -210,7 +210,7 @@ importers:
         specifier: ^10.11.0
         version: 10.11.0(jiti@2.7.0)
       lefthook:
-        specifier: ^2.1.17
+        specifier: ^2.2.0
         version: 2.2.1
       lint-staged:
         specifier: ^17.6.0
